@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons right>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title class="animated slideInRight delay-1s">Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="animated slideInRight delay-0s">
+  <div class="inner-container">
+    <button
+      class="btn btn-outline-white float-right font-15 padding-less mt-3"
+      (click)="presentProfileModal()"
+    >
+      <ion-icon name="create"></ion-icon> &nbsp; edit
+    </button>
+    <div class="clearfix"></div>
+    <div class="row student-profile pt-5 ">
+      <img src="assets/imgs/student.png" class="rounded-circle" />
+
+      <!-- <h5>80% <br />Active</h5> -->
+    </div>
+    <br />
+
+    <div class="profile-white">
+      <div class="row">
+        <div class="col-sm-12">
+          <p *ngIf="student_profile" class="profile-name">
+            Student Name:<span class="stdnt-name">{{
+              student_profile.first_name
+            }}</span
+            ><br />
+            Phone:
+            <span class="text-primary">{{ student_profile.contact }}</span
+            ><br />
+            Email: <span class="text-primary">{{ student_profile.email }}</span
+            ><br />
+            D.O.B: <span class="text-primary">{{ DateOfBirth }}</span
+            ><br />
+            Address :
+            <span class="text-primary">{{ student_details.address }}</span
+            ><br />
+            Address :
+            <span class="text-primary">{{ student_details.institution }}</span
+            ><br />
+            Board Name :
+            <span class="text-primary">{{ student_details.board_id }}</span
+            ><br />
+            Class Completed :
+            <span class="text-primary">{{ student_details.class_id }}</span
+            ><br />
+          </p>
+
+          <hr />
+          <!-- <p class="head">ABOUT</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever
+          </p> -->
+        </div>
+      </div>
+      <!-- <hr />
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="head">WEEKLY TASK STREAM</p>
+          <img src="assets/imgs/task.png" class="img-fluid" />
+        </div>
+        <div class="col-sm-3">
+          <p class="head mt-3">PROJECTS</p>
+          <span class="blue1">15</span>
+        </div>
+        <div class="col-sm-3">
+          <p class="head">HOURS</p>
+          <span class="blue1">40</span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</ion-content>

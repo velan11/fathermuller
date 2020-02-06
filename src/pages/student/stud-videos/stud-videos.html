@@ -1,0 +1,123 @@
+<!--
+  Generated template for the StudVideosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title> Videos</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content-page">
+  <!-- <div *ngIf="noData" class="alert alert-danger">
+      {{ noDataValue }}
+    </div>
+    <ion-list>
+      <div *ngFor="let i of iframeURL">
+        <div class="card">
+          <ion-item>
+            <b>{{ i.videoList[0].videoTitle }}</b>
+            <div class="video-container">
+              <iframe
+                [src]="i.videoList[0].videoLink | safepipe"
+                frameborder="0"
+                width="560"
+                height="315"
+              ></iframe>
+            </div>
+          </ion-item>
+        </div>
+      </div>
+    </ion-list> -->
+  <ion-card>
+    <!-- <img src="../../../assets/imgs/notice- (1).jpg" /> -->
+    <div class="da">
+      <ion-card>
+        <h2 style="padding: 10px;">
+          Father Muller Charitable Institutions Documentary
+        </h2>
+        <a href="https://www.youtube.com/watch?v=YRPpm5npH1g">
+          <div class="cont">
+            <img
+              src="../../../assets/imgs/news.jpg"
+              alt="Snow"
+              style="width:100%;height: 100px;"
+            />
+
+            <div class="centered">
+              <img
+                src="../../../assets/imgs/utube.png"
+                width="55"
+                height="30"
+                alt="Snow"
+              />
+            </div>
+          </div>
+        </a>
+      </ion-card>
+
+      <ion-card>
+        <h2 style="padding: 10px;">
+          Father Muller College Nursing
+        </h2>
+        <a href="https://www.youtube.com/watch?v=D5s7HodEsVU">
+          <div class="cont">
+            <img
+              src="../../../assets/imgs/cvzx.png"
+              alt="Snow"
+              style="width:100%;height: 100px;"
+            />
+
+            <div class="centered">
+              <img
+                src="../../../assets/imgs/utube.png"
+                width="55"
+                height="30"
+                alt="Snow"
+              />
+            </div>
+          </div>
+        </a>
+      </ion-card>
+      <!-- <ion-card>
+        <div class="cont" (click)="openUrl()">
+          <img
+            src="../../../assets/imgs/news.jpg"
+            alt="Snow"
+            style="width:100%;"
+          />
+
+          <div class="centered">
+            <img src="../../../assets/imgs/utube.png" width="55"  height="30" alt="Snow" />
+          </div>
+        </div>
+      </ion-card> -->
+      <!-- https://www.bing.com/videos/search?q=fr+muller+mangalore+news&&view=detail&mid=C5AB417D737A699A5DC0C5AB417D737A699A5DC0&&FORM=VRDGAR -->
+    </div></ion-card
+  >
+  <!-- <div class="form-attendance">
+    <div *ngIf="NoInternet">
+      <b>No Internet Connection or Server Error. Try Again Later.</b>
+    </div>
+  </div> -->
+</ion-content>
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

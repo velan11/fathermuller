@@ -1,0 +1,97 @@
+<!--
+  Generated template for the FacViewAssignmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Assignment List</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content-page">
+  <div class="view-assign">
+    <!-- <ion-row>
+      <ion-col class="heder5">
+        <ion-list>
+          <ion-row> -->
+
+    <!-- <table
+      id="assignTable"
+      datatable
+      [dtOptions]="dtOptions"
+      border="1"
+      style="width:100%; padding: 2px"
+    > -->
+    <table
+      id="example"
+      datatable
+      [dtOptions]="dtOptions"
+      [dtTrigger]="dtTrigger"
+      class="table row-border hover table-bordered"
+      cellspacing="0"
+    >
+      <thead class="thead">
+        <tr>
+          <th>slno</th>
+          <th>Title</th>
+          <th>Class Details</th>
+          <th>Subject</th>
+          <th (click)="viewAssign(item)">View</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="whit" *ngFor="let item of assignment_list; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.title }}</td>
+
+          <td>
+            {{ item.course }} - {{ item.period }} -
+            {{ item.section }}
+          </td>
+          <td>{{ item.subject }}</td>
+          <td (click)="viewAssign(item)">
+            <img
+              (click)="viewAssign(item)"
+              class="icon view-icon img-size"
+              src="assets/imgs/view.png"
+            />
+          </td>
+          <td>
+            <button
+              ion-button
+              [disabled]="!item.enable_delete"
+              (click)="DeleteAlert(item)"
+            >
+              <img class="icon delete-icon" src="assets/imgs/delete.png" />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- </ion-row>
+        </ion-list>
+      </ion-col>
+    </ion-row> -->
+  </div>
+</ion-content>
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.png" /> Powered By ATC ONLINE</p>
+</ion-footer>

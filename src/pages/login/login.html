@@ -1,0 +1,205 @@
+<ion-content class="login_container">
+  <span (click)="back()" class="back">
+    <ion-icon name="ios-arrow-back-outline"></ion-icon
+  ></span>
+  <!-- <div class="text-center" style="text-align: center;">
+    <img src="assets/imgs/login-bg11.jpg" class="img-fluid" alt="" />
+  </div> -->
+
+  <!-- Start Parent Form -->
+  <div *ngIf="ParentForm">
+    <div class="login-block loginForm">
+      <div class="logo-img"><img src="assets/imgs/logo.png" /></div>
+      <div class="login-content">
+        <h3 class="login-text">Student Login</h3>
+        <form #ParentloginForm="ngForm" (ngSubmit)="login()" autocomplete="on">
+          <ion-row>
+            <ion-col>
+              <ion-list inset>
+                <ion-item no-lines class="login-row">
+                  <ion-label class="lblLogin" color="default" floating>
+                    <ion-icon
+                      ios="ios-phone-portrait"
+                      md="md-phone-portrait"
+                      class="fa-unlock-alt"
+                    ></ion-icon>
+                    Enter Mobile Number
+                  </ion-label>
+                  <!-- id="Form_input5" -->
+                  <ion-input
+                    #input
+                    name="mobile_number"
+                    type="tel"
+                    clearOnEdit="false"
+                    id="Form-pass5"
+                    required
+                    [(ngModel)]="this.parentOtp.mobile_number"
+                  ></ion-input>
+                </ion-item>
+                <ion-item no-lines class="login-row">
+                  <ion-label class="lblLogin" color="default" floating>
+                    <ion-icon
+                      ios="ios-lock"
+                      md="md-lock"
+                      class="passwd"
+                    ></ion-icon>
+                    Enter Password
+                  </ion-label>
+                  <!-- id="Form_input5" -->
+                  <ion-input
+                    #input
+                    name="password"
+                    type="password"
+                    clearOnEdit="false"
+                    id="Form-pass5"
+                    [(ngModel)]="this.parentOtp.password"
+                    required
+                  >
+                  </ion-input>
+                </ion-item>
+                <ion-item class="showPassword l">
+                  <ion-label class="label">Show Password</ion-label>
+                  <ion-checkbox
+                    class="checkPassword"
+                    color="secondary"
+                    name="showPassword"
+                    (click)="showPassword(input)"
+                    required
+                  ></ion-checkbox>
+                </ion-item>
+                <ion-item class="forgotPassword l">
+                  <ion-label (click)="register('forgotPassword')"
+                    >Forgot Password</ion-label
+                  >
+                </ion-item>
+                <div *ngIf="error" class="alert alert-danger">
+                  {{ LoginError }}
+                </div>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <button
+                ion-button
+                class="btn btn-rounded "
+                type="submit"
+                color="primary"
+                [disabled]="!ParentloginForm.form.valid"
+              >
+                Go
+              </button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </div>
+    </div>
+    <div class="btmText">
+      Haven't Account
+      <!-- <span class="register" (click)="register('register')">Register</span -->
+      <br />
+      <button
+        (click)="register('register')"
+        ion-button
+        style="background: #39668c!important;border-radius: 4px;"
+        color="secondary"
+      >
+        Create Account
+      </button>
+      <!-- <span class="register" (click)="register('forgotPassword')">
+            Forgot Password</span
+          > -->
+    </div>
+  </div>
+
+  <!-- End of Parent Form -->
+
+  <!-- Start Faculty Login form -->
+  <div *ngIf="FacultyForm" class="login-block-faculty loginForm">
+    <div class="logo-img"><img src="assets/imgs/logo.png" /></div>
+    <div class="login-content">
+      <h3 class="login-text">Faculty Login</h3>
+      <form
+        #FacultyloginForm="ngForm"
+        (ngSubmit)="facultyLogin()"
+        autocomplete="on"
+      >
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              <ion-item no-lines class="login-row">
+                <ion-label class="lblLogin" color="default" floating>
+                  <ion-icon ios="ios-person" md="md-person"></ion-icon>
+                  Enter Username
+                </ion-label>
+                <!-- id="Form_input5" -->
+                <ion-input
+                  #input
+                  name="username"
+                  type="text"
+                  id="Form-pass5"
+                  required
+                  [(ngModel)]="this.facultyData.username"
+                ></ion-input>
+              </ion-item>
+              <ion-item no-lines class="login-row">
+                <ion-label class="lblLogin" color="default" floating>
+                  <ion-icon
+                    ios="ios-lock"
+                    md="md-lock"
+                    class="passwd"
+                  ></ion-icon
+                  >Enter Password
+                </ion-label>
+                <!-- id="Form_input5" -->
+                <ion-input
+                  #input
+                  clearOnEdit="false"
+                  name="password"
+                  type="password"
+                  id="Form-pass5"
+                  required
+                  [(ngModel)]="this.facultyData.password"
+                ></ion-input>
+              </ion-item>
+              <ion-item class="showPassword l">
+                <ion-label class="label">Show Password</ion-label>
+                <ion-checkbox
+                  class="checkPassword"
+                  color="secondary"
+                  name="showPassword"
+                  (click)="showPassword(input)"
+                ></ion-checkbox>
+              </ion-item>
+
+              <div *ngIf="error" class="alert alert-danger">
+                {{ loginError }}
+              </div>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button
+              ion-button
+              class="btn btn-rounded z-depth-1"
+              type="submit"
+              [disabled]="!FacultyloginForm.form.valid"
+            >
+              Go
+            </button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+  <!-- end Faculty Login form -->
+  <div>
+    <span (click)="back()" class="back">
+      <ion-icon name="ios-arrow-back-outline"></ion-icon
+    ></span>
+  </div>
+</ion-content>
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

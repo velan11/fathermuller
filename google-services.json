@@ -1,0 +1,191 @@
+{
+  "project_info": {
+    "project_number": "949668894307",
+    "firebase_url": "https://pacifycahybrid.firebaseio.com",
+    "project_id": "pacifycahybrid",
+    "storage_bucket": "pacifycahybrid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949668894307:android:21ad4d0d109e924e",
+        "android_client_info": {
+          "package_name": "biz.atconline.pacifyca.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwGgkJi5Gk1hTlD3VktCHZV4LWbkvHLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "949668894307-k7id3n784tjghmtgsefgdan4l57sed8t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "biz.atconline.pacifyca.gonzaga"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949668894307:android:ec40fde94df88fd7",
+        "android_client_info": {
+          "package_name": "biz.atconline.pacifyca.gonzaga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwGgkJi5Gk1hTlD3VktCHZV4LWbkvHLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "949668894307-k7id3n784tjghmtgsefgdan4l57sed8t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "biz.atconline.pacifyca.gonzaga"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949668894307:android:9ae4c39543b78c2f",
+        "android_client_info": {
+          "package_name": "biz.atconline.pacifyca.loyola"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwGgkJi5Gk1hTlD3VktCHZV4LWbkvHLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "949668894307-k7id3n784tjghmtgsefgdan4l57sed8t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "biz.atconline.pacifyca.gonzaga"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949668894307:android:f6a170d9fa49e967",
+        "android_client_info": {
+          "package_name": "biz.atconline.pacifyca.mjes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwGgkJi5Gk1hTlD3VktCHZV4LWbkvHLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "949668894307-k7id3n784tjghmtgsefgdan4l57sed8t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "biz.atconline.pacifyca.gonzaga"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949668894307:android:ee2077d7b3f8ca1a",
+        "android_client_info": {
+          "package_name": "biz.atconline.pacifyca.sapuc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwGgkJi5Gk1hTlD3VktCHZV4LWbkvHLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949668894307-jjhu6u7sl7nsfcvmt8pcelph41it1ir0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "949668894307-k7id3n784tjghmtgsefgdan4l57sed8t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "biz.atconline.pacifyca.gonzaga"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

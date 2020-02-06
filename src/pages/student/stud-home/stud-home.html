@@ -1,0 +1,119 @@
+<!--
+  Generated template for the StudHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title style="color: #fff !important">HOME</ion-title>
+    <ion-buttons right>
+      <button
+        class="msg-icon"
+        ion-button
+        clear
+        icon-only
+        (click)="GotoSmsPage()"
+      >
+        <ion-icon ios="ios-mail" md="md-mail" style=" color: #fff;"></ion-icon>
+        <ion-badge item-end class="badgecss">
+          <b>{{ UnreadMsglenth }}</b>
+        </ion-badge>
+      </button>
+      <button ion-button clear icon-only (click)="getStudentsList()">
+        <ion-icon
+          ios="ios-contact"
+          md="md-contact"
+          style=" color: #fff;"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="animated slideInUp delay-0s bashboard-bg">
+  <!-- <div>
+    <img src="assets/imgs/slider.png" class="slider-img" />
+  </div> -->
+  <!-- 
+  <ion-searchbar
+    style="margin-top: 20px;margin-bottom: 20px;   padding: 0 56px;"
+  ></ion-searchbar> -->
+
+  <div>
+    <ion-grid>
+      <ion-row style="margin-top: 0%;">
+        <ion-col col-6 (click)="Assignment()">
+          <ion-card class="card1">
+            <span class="notification-popup" *ngIf="notify_assignment"
+              >{{ assignment_count_new }}</span
+            >
+            <img class="img1" src="assets/imgs/assignment.png" />
+            <div class="text1"><b>Assignment</b></div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 (click)="circularNotices(4)">
+          <ion-card class="card2">
+            <img src="assets/imgs/mark.png" class="img1" />
+            <div class="text1"><b>Circular/Notice</b></div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top: -3%;">
+        <ion-col col-6 (click)="TIME_TABLE()">
+          <ion-card class="card3">
+            <img class="img1" src="assets/imgs/calender.png" />
+            <div class="text1"><b>Class Schedule </b></div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 (click)="Newsee()">
+          <ion-card class="card4">
+            <img class="img1" src="assets/imgs/time table.png" />
+            <div class="text1"><b>News/Events</b></div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: -3%;">
+        <ion-col col-6 (click)="atten()">
+          <ion-card class="card7">
+            <img class="img1" src="assets/imgs/atten.png" />
+            <div class="text1"><b>Attendance</b></div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 (click)="Report()">
+          <ion-card class="card8">
+            <!-- <span class="notification-popup" *ngIf="notify"
+              >{{ exam_count_no }}</span
+            > -->
+            <img class="img1" src="assets/imgs/report.png" />
+            <div class="text1"><b>Report card</b></div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: -3%;">
+        <ion-col col-6 (click)="Calender()">
+          <ion-card class="card6">
+            <img class="img1" src="assets/imgs/attendence.png" />
+            <div class="text1"><b>Calendar</b></div>
+          </ion-card>
+        </ion-col>
+        <ion-col col-6 (click)="about()">
+          <ion-card class="card5">
+            <span class="notification-popup" *ngIf="notify"
+              >{{ exam_count_no }}</span
+            >
+            <img class="img1" src="assets/imgs/exam.png" />
+            <div class="text1"><b>Video</b></div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

@@ -1,0 +1,131 @@
+<!--
+  Generated template for the FacAssignmentStudListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Assignment</ion-title>
+    <!-- <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="stud-list">
+    <ion-row>
+      <ion-col class="heder5">
+        <ion-list>
+          <form #addAssignment="ngForm" (ngSubmit)="sendAssignment()">
+            <ion-row>
+              <table
+                id="table1"
+                datatable
+                [dtOptions]="dtOptions1"
+                border="1"
+                style="width:100%; padding: 2px"
+              >
+                <thead class="thead">
+                  <tr>
+                    <th>
+                      <ion-checkbox
+                        class=""
+                        id="selectall"
+                        value=""
+                        name="selectall"
+                        (ionChange)="checkAll($event)"
+                      >
+                      </ion-checkbox>
+                    </th>
+                    <th>Admission No</th>
+                    <th>Student Name</th>
+                    <th>Father's Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="whit"
+                    *ngFor="
+                      let item of assignmentStudList.student_details;
+                      let i = index
+                    "
+                  >
+                    <td>
+                      <ion-checkbox
+                        class=""
+                        id="exampleCheck1"
+                        [checked]="selectedAll"
+                        value="item.id"
+                        name="stud_id"
+                        (ionChange)="getMarkedStudList(item.id, $event)"
+                      >
+                      </ion-checkbox>
+                    </td>
+
+                    <td>{{ item.roll_no }}</td>
+
+                    <td>
+                      {{ item.first_name }} {{ item.middle_name }}
+                      {{ item.last_name }}
+                    </td>
+                    <td>{{ item.fathers_name }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-checkbox
+                  class=""
+                  id="smsVal"
+                  name="sendSMS"
+                  [(ngModel)]="sendTextSMS"
+                  value="Y"
+                ></ion-checkbox>
+                <ion-label>Send SMS</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <button
+                  [disabled]="!sendAssign"
+                  ion-button
+                  class="btn btn-block login-btn btn-rounded z-depth-1"
+                  full
+                  type="submit"
+                >
+                  Send Assignment
+                </button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <button
+                  ion-button
+                  [disabled]="!SendAssignmentAll"
+                  class="btn btn-block login-btn btn-rounded z-depth-1"
+                  (click)="sendToAll()"
+                  full
+                  type="button"
+                >
+                  Send Assignment to all
+                </button>
+              </ion-col>
+            </ion-row>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+    <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

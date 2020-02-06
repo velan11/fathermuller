@@ -1,0 +1,41 @@
+<!--
+  Generated template for the ReportcardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Report Card</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 text-center style="margin-top: 25px;">Report Card</h2>
+  <img
+    style="padding: 10px;"
+    src="../../../assets/imgs/amithaaa.jpeg"
+    (click)="viewPhoto()"
+  />
+  <p
+    style="color: #5282af;font-size: 11px;text-align: right;
+        margin-right: 15px;"
+  >
+    *Click to View notice and SHARE
+  </p>
+</ion-content>

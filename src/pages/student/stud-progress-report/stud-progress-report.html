@@ -1,0 +1,171 @@
+<!--
+  Generated template for the StudProgressReportPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Progress Report</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content-page">
+  <div class="form-attendance">
+    <!--<ion-item>
+      <ion-label floating
+        >Course<span class="mandatory-asterick">*</span></ion-label
+      >
+      <ion-select
+        interface="popover"
+        required
+        name="course"
+        [(ngModel)]="course_period"
+        (ionChange)="getMarksInfo()"
+      >
+        <ion-option *ngIf="changedate" aria-checked="true">
+          Select Course
+        </ion-option>
+        <ion-option
+          *ngFor="let item of course_list; let i = index; let l = last"
+          [value]="item.key"
+          [selected]="l"
+        >
+          {{ item.value }}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </div> -->
+
+  <div *ngIf="noData" class="alert alert-danger">
+    {{ noDataValue }}
+  </div>
+  <!--
+    <ion-grid *ngFor="let data of responseData; let i=index">
+      <h4 class="marks-title">{{data.exam_title}}</h4>
+      <div class="marks-grid-body">
+        <ion-row class="marks-row-head">
+          <ion-col class="marks-col-head">Subject</ion-col>
+          <ion-col class="marks-col-head">Max Marks</ion-col>
+          <ion-col class="marks-col-head">Min Marks</ion-col>
+          <ion-col class="marks-col-head">Marks Secured</ion-col>
+          <ion-col class="marks-col-head">Result</ion-col>
+        </ion-row>
+        <ion-row class="marks-row" *ngFor="let marks of data.mark_details">
+          <ion-col class="marks-col">{{marks.subject}}</ion-col>
+          <ion-col class="marks-col">{{marks.max_marks}}</ion-col>
+          <ion-col class="marks-col">{{marks.min_marks}}</ion-col>
+          <ion-col class="marks-col">{{marks.mark_secured}}</ion-col>
+          <ion-col class="marks-col">{{marks.result}}</ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+  -->
+
+  <!-- <button *ngIf="noMarks" ion-button (click)="generatePdf()">
+    Generate Pdf
+  </button> -->
+
+  <!-- accordian section -->
+
+  <ion-list *ngIf="noMarks" class="accordion-list">
+    <!-- Save pdf id -->
+    <div id="Html2Pdf">
+      <!-- First Level -->
+      <ion-list-header
+        *ngFor="let item of mark_data; let i = index"
+        no-lines
+        no-padding
+      >
+        <!-- Toggle Button -->
+        <button
+          ion-item
+          full
+          (click)="toggleSection(i)"
+          class="marks-title"
+          detail-none
+          [ngClass]="{ 'section-active': item.open, section: !item.open }"
+        >
+          <ion-icon
+            item-right
+            name="ios-arrow-back"
+            *ngIf="!item.open"
+          ></ion-icon>
+          <ion-icon
+            item-right
+            name="ios-arrow-down"
+            *ngIf="item.open"
+          ></ion-icon>
+          {{ item.exam_title }}
+        </button>
+        <ion-list *ngIf="item.mark_details && item.open" no-lines>
+          <ion-row class="marks-row-head">
+            <ion-col class="marks-col-head">Subject</ion-col>
+            <!-- <ion-col class="marks-col-head">Max Marks</ion-col> -->
+            <ion-col class="marks-col-head">Min Marks</ion-col>
+            <ion-col class="marks-col-head">Marks Secured</ion-col>
+            <ion-col class="marks-col-head">Result</ion-col>
+          </ion-row>
+
+          <!-- Second Level -->
+
+          <div
+            *ngFor="let child of item.mark_details; let j = index"
+            no-padding
+            class="animated fadeInDown"
+          >
+            <div *ngFor="let key of item.mark_details[j]">
+              <!-- Direct Add Button as Fallback -->
+              <!--
+              <ion-item *ngIf="!child.mark_details" ion-item detail-none class="child-item" text-wrap>
+            -->
+              <!--
+              <h2>{{ child.subject }}</h2>
+              <p text-lowercase>{{ child.result }}</p>
+            -->
+              <ion-row
+                class="marks-row"
+                *ngIf="!child.mark_details"
+                class="child-item"
+              >
+                <ion-col class="marks-col-subject" text-wrap>{{
+                  key.subject
+                }}</ion-col>
+                <!-- <ion-col class="marks-col"></ion-col> -->
+                <ion-col class="marks-col">{{ key.min_marks }}</ion-col>
+                <ion-col class="marks-col"
+                  >{{ key.mark_secured }}/{{ key.max_marks }}
+                </ion-col>
+                <ion-col class="marks-col">{{ key.result }}</ion-col>
+              </ion-row>
+              <!--
+              <button ion-button outline item-end (click)="buyItem(child)">{{ child.price }}</button>
+            -->
+              <!-- </ion-item> -->
+            </div>
+          </div>
+        </ion-list>
+      </ion-list-header>
+    </div>
+  </ion-list>
+</div>
+  <!-- end accordian section -->
+</ion-content>
+<ion-footer>
+    <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

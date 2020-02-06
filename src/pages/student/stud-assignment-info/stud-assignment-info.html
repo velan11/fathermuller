@@ -1,0 +1,79 @@
+<!--
+  Generated template for the StudAssignmentInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Assignment Details</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll>
+  <div class="assign-content">
+    <ion-row class="assignment-details-header">
+      <ion-col class="title">{{
+        this.selectedAssignment.assignment.title
+      }}</ion-col>
+      <ion-col class="due-date"
+        >Due:{{ this.selectedAssignment.assignment.expiryDate }}
+      </ion-col>
+    </ion-row>
+    <ion-row class="assignment-details-content">
+      <ion-list>
+        <ion-item class="assign-info-item">
+          <h4 class="assign-info-heading">Assignee Name</h4>
+          <p>{{ this.selectedAssignment.assignment.assigneeName }}</p>
+        </ion-item>
+        <ion-item>
+          <h4 class="assign-info-heading">Assigned Date</h4>
+          <p>{{ this.selectedAssignment.assignment.assigneddate }}</p>
+        </ion-item>
+        <ion-item>
+          <h4 class="assign-info-heading">Subject Name</h4>
+          <p>{{ this.selectedAssignment.subname }}</p>
+        </ion-item>
+        <ion-item>
+          <h4 class="assign-info-heading">Description</h4>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+  </div>
+  <!-- <zoom-area
+    [(scale)]="scale"
+    (afterZoomIn)="afterZoomIn($event)"
+    (afterZoomOut)="afterZoomOut($event)"
+    [(controls)]="showControls"
+  > -->
+  <p
+    class="assign-desc"
+    [innerHTML]="selectedAssignment.assignment.description"
+    imageViewer
+  >
+    {{ this.selectedAssignment.assignment.description }}
+  </p>
+  <!-- <p
+              [innerHTML]="selectedAssignment.assignment.description"
+              imageViewer
+              text-wrap
+            >
+              {{ this.selectedAssignment.assignment.description }}
+            </p> -->
+  <!-- </zoom-area> -->
+</ion-content>

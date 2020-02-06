@@ -1,0 +1,53 @@
+page-stud-sms {
+  .star {
+    visibility: hidden;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .star:before {
+    content: "\2605";
+    position: absolute;
+    visibility: visible;
+  }
+  .star:checked:before {
+    content: "\2606";
+    position: absolute;
+  }
+  .segment-md .segment-button.activated,
+  .segment-md .segment-button.segment-activated {
+    border-color: #318f91;
+    opacity: 1;
+  }
+  .segment-ios .segment-button {
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0px;
+  }
+  .segment-ios .segment-button.segment-activated {
+    background: none;
+    border-bottom: 2px solid #a92c16;
+    border-radius: 0px;
+  }
+  .segment-ios .segment-button:first-of-type {
+    border-radius: 0px;
+  }
+
+  .content-page {
+    background: url(../../assets/imgs/content-bg.jpg);
+    // margin: 57px 14px 23px 0px;
+    background-repeat: no-repeat;
+  }
+
+  .form-attendance {
+    background: white;
+    background-position: center;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px auto;
+  }
+
+  .segments-sms {
+    background: #fff;
+  }
+}

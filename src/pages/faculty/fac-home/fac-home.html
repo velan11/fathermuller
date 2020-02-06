@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-navbar>
+    <!-- <ion-buttons right>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons> -->
+    <button ion-button menuToggle class="menu-fac">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="fac-home-title">HOME</ion-title>
+    <!-- <button
+      class="profile-icon"
+      ion-button
+      clear
+      icon-only
+      (click)="getInstitute()"
+    >
+      <ion-icon
+        class="icon-school icon-color"
+        ios="ios-school"
+        md="md-school"
+        is-active="false"
+      ></ion-icon>
+    </button> -->
+
+    <ion-buttons right>
+      <button
+        class="msg-icon"
+        ion-button
+        clear
+        icon-only
+        (click)="GotoSmsPage()"
+      >
+        <ion-icon ios="ios-mail" md="md-mail" style=" color: #fff;"></ion-icon>
+        <ion-badge item-end class="badgecss">
+          0
+        </ion-badge>
+      </button>
+      <button ion-button clear icon-only (click)="getInstitute()">
+        <ion-icon
+          name="person"
+          style=" color: #fff; font-size: 23px;
+          margin-top: 5px;"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bashboard-bg">
+  <!-- <ion-searchbar style="margin-top: 20px;    padding: 0 56px;"></ion-searchbar> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 (click)="showAssignments()">
+        <ion-card class="card1">
+          <img class="img1" src="assets/imgs/assignment.png" />
+          <div class="text1"><b>Assignments</b></div>
+          <br />
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 (click)="viewAssignments()">
+        <ion-card class="card2">
+          <img class="img1" src="assets/imgs/assignment.png" />
+          <div class="text1"><b>View Assignments</b></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 (click)="Newsee()">
+        <ion-card class="card3">
+          <img class="img1" src="assets/imgs/assignment.png" />
+          <div class="text1"><b>News & Events</b></div>
+          <br />
+        </ion-card>
+      </ion-col>
+      <!-- <ion-col col-6 (click)="Notice()">
+        <ion-card class="card2">
+          <img class="img1" src="assets/imgs/assignment.png" />
+          <div class="text1"><b>Notice</b></div>
+        </ion-card>
+      </ion-col> -->
+
+      <ion-col col-6 (click)="Notice()">
+        <ion-card class="card4">
+          <img src="assets/imgs/mark.png" class="img1" />
+          <div class="text1"><b>Circular & Notice</b></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: -3%;">
+      <ion-col col-6 (click)="TIME_TABLE()">
+        <ion-card class="card6">
+          <img class="img1" src="assets/imgs/calender.png" />
+          <div class="text1"><b>Class Schedule </b></div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 (click)="about()">
+        <ion-card class="card5">
+          <span class="notification-popup" *ngIf="notify"
+            >{{ exam_count_no }}</span
+          >
+          <img class="img1" src="assets/imgs/exam.png" />
+          <div class="text1"><b>Video</b></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row style="margin-top: 0%;">
+        <ion-col col-12 (click)="changePasswd()">
+          <ion-card class="card1">
+            <img class="img1" src="assets/imgs/mark.png" />
+            <div class="text1"><b>Change Password</b></div>
+          </ion-card>
+        </ion-col>
+
+        <ion-col col-6 (click)="showAttendanceReport()">
+          <ion-card class="card2">
+            <img src="assets/imgs/exam.png" class="img1" />
+            <div class="text1"><b>Attendance Report</b></div>
+          </ion-card>
+        </ion-col> 
+      </ion-row>-->
+  </ion-grid>
+  <!-- </div> -->
+</ion-content>
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

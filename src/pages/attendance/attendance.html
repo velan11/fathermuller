@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Attendance</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-calendar
+    *ngIf="calc == 0"
+    [(ngModel)]="date"
+    class="ion-clder"
+    [type]="type"
+    [readonly]="false"
+    [options]="optionsRange"
+    (onSelect)="onSelect($event)"
+    (monthChange)="monthchnge($event)"
+    [format]="'YYYY-MM-DD'"
+  >
+  </ion-calendar>
+</ion-content>

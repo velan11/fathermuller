@@ -1,0 +1,42 @@
+page-fac-assignment-stud-list {
+  .stud-list {
+    padding-left: 10%;
+  }
+  table.dataTable {
+    width: 91%;
+    margin-left: 0px;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0px;
+  }
+  ion-label.label.label-md {
+    position: absolute;
+    margin: 5px 0 0 25px;
+  }
+  .stud-list {
+    padding: 0 9%;
+  }
+  div#DataTables_Table_0_length {
+    font-size: 12px;
+    margin-right: 80px;
+  }
+  div#DataTables_Table_0_filter {
+    font-size: 12px;
+  }
+  input[type="search"] {
+    width: 120px;
+  }
+  .bar-button-default-ios {
+    color: #ffffff !important;
+    background-color: transparent;
+  }
+  ion-checkbox#smsVal {
+    top: 8px;
+    float: left;
+    position: relative;
+    right: 10px;
+  }
+  .thead {
+    background-color: #dadada;
+  }
+}

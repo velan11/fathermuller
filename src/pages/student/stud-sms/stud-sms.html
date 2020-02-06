@@ -1,0 +1,105 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>SMS</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="segments-sms">
+    <ion-segment [(ngModel)]="Sms">
+      <ion-segment-button value="UnreadMessage">
+        <ion-icon
+          style="color: #3ca198;"
+          ios="ios-mail"
+          md="md-mail"
+        ></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="ReadMessage">
+        <ion-icon
+          style="color: #3ca198;"
+          ios="ios-mail-open"
+          md="md-mail-open"
+        ></ion-icon>
+      </ion-segment-button>
+      <!-- <ion-segment-button value="Favorite">
+        <ion-icon ios="ios-star" md="md-star"></ion-icon>
+      </ion-segment-button> -->
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content padding class="content-page">
+  <div class="form-attendance">
+    <div *ngIf="noData" class="alert alert-danger">
+      {{ noDataValue }}
+    </div>
+  
+    <div [ngSwitch]="Sms">
+      <ion-list *ngSwitchCase="'UnreadMessage'">
+        <div *ngFor="let y of UnreadMsg">
+          <ion-item>
+            <ion-icon
+              (click)="deleteMessage(y.id)"
+              ios="ios-trash"
+              md="md-trash"
+              item-start
+              style="color: #b70218;"
+            ></ion-icon>
+            <div>
+              <h2 (click)="view(y)">{{ y.institution_name }}</h2>
+              <!-- <div style="    margin-top: -15px;
+            margin-left: -29px">
+                <input (click)="Favorite(y)" style="color:yellow" class="star" type="checkbox" title="bookmark page" checked>
+              </div> -->
+              <p (click)="view(y)" ng-bind-html="item.get('Content') | limitTo:5">
+                {{ y.message_content }}
+              </p>
+            </div>
+          </ion-item>
+        </div>
+      </ion-list>
+    </div>
+    <div [ngSwitch]="Sms">
+      <ion-list *ngSwitchCase="'ReadMessage'">
+        <div *ngFor="let x of ReadMsg">
+          <ion-item>
+            <ion-icon
+              (click)="deleteMessage(x.id)"
+              ios="ios-trash"
+              md="md-trash"
+              item-start
+              style="color: #b70218;"
+            ></ion-icon>
+            <div>
+              <h2 (click)="view(x)">{{ x.institution_name }}</h2>
+              <!-- <div style="    margin-top: -15px;
+                margin-left: -29px">
+                    <input (click)="Favorite(y)" style="color:yellow" class="star" type="checkbox" title="bookmark page" checked>
+                  </div> -->
+              <p (click)="view(x)" ng-bind-html="item.get('Content') | limitTo:5">
+                {{ x.message_content }}
+              </p>
+            </div>
+          </ion-item>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+  
+</ion-content>
+<ion-footer>
+    <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

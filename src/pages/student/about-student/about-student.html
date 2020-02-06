@@ -1,0 +1,93 @@
+<!--
+  Generated template for the AboutStudentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>About Student</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content-page" style="margin-top: 30px;">
+  <img
+    style="border-radius: 24px; position: absolute;z-index: 9999;left: 36%;"
+    class="prof-img"
+    src="../../../assets/imgs/woman-pic.jpg"
+  />
+  <div class="form-attendance" style="position: relative;">
+    <div *ngIf="NoInternet">
+      <b>No Internet Connection or Server Error. Try Again Later.</b>
+    </div>
+    <!-- <div>
+      <ion-card text-center *ngIf="student_info" class="prof-img">
+        <img [src]="student_info.ProfilePhoto" />
+      </ion-card>
+      <ion-item></ion-item>
+    </div> -->
+    <ion-item style="height: 100px;" no-lines></ion-item>
+
+    <div *ngIf="student_info">
+      <ion-item>
+        <ion-icon name="person" item-start large></ion-icon>
+        <h2>Full Name</h2>
+        <p style="margin-top: 5px;">{{ student_info.FullName }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="information-circle" item-start large></ion-icon>
+        <h2>Admission No.</h2>
+        <p style="margin-top: 5px;">{{ student_info.RegisterNumber }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar" item-start large></ion-icon>
+        <h2>Joining Date</h2>
+        <p style="margin-top: 5px;">{{ joining_date }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="time" item-start large></ion-icon>
+        <h2>Date Of Birth</h2>
+        <p style="margin-top: 5px;">{{ DateOfBirth }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="school" item-start large></ion-icon>
+        <h2>Institute</h2>
+        <p style="margin-top: 5px;">{{ student_info.Institute }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="book" item-start large></ion-icon>
+        <h2>Course Name</h2>
+        <p style="margin-top: 5px;" text-wrap>{{ student_info.CourseName }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar" item-start large></ion-icon>
+        <h2>Academic Year</h2>
+        <p style="margin-top: 5px;">{{ student_info.AcademicYear }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="information-circle" item-start large></ion-icon>
+        <h2>Year/Semester</h2>
+        <p style="margin-top: 5px;">{{ student_info.period }}</p>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

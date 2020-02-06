@@ -1,0 +1,93 @@
+
+<ion-content class="login_container">
+  <span (click)="back()" class="back">
+    <ion-icon name="ios-arrow-back-outline"></ion-icon
+  ></span>
+  <!-- <div class="text-center" style="text-align: center;">
+    <img src="assets/imgs/main-logo.png" class="img-fluid" alt="" />
+  </div> -->
+  <!-- <div class="text-center " style="text-align: center;">
+     <img src="assets/imgs/main-logo.png" class="img-fluid" alt="" /> 
+  </div> -->
+  <!-- <div>
+    <ion-item class="select-user">
+      <ion-label>User Type</ion-label>
+      <ion-select
+        interface="popover"
+        [(ngModel)]="user_val"
+        (ionChange)="User_Form()"
+      >
+        <ion-option value="p" selected="true">Parents</ion-option>
+        <ion-option value="f">Faculty</ion-option>
+       
+      </ion-select>
+    </ion-item>
+  </div> -->
+
+  <!-- Start Parent Form -->
+  <div class="login-block loginForm">
+    <div class="logo-img"> <img src="assets/imgs/logo.png"></div>
+    <div class="login-content">
+      <h3 class="login-text">{{ Page_heading }}</h3>
+      <form #ParentloginForm="ngForm" (ngSubmit)="resetLogin()" autocomplete="on">
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              <ion-item no-lines class="login-row">
+                <ion-label class="lblLogin" color="default" floating>
+                  <ion-icon
+                    ios="ios-phone-portrait"
+                    md="md-phone-portrait"
+                    class="fa-unlock-alt"
+                  ></ion-icon
+                  >Mobile Number
+                </ion-label>
+                <!-- id="Form_input5" -->
+                <ion-input
+                  #input
+                  name="mobile_number"
+                  type="tel"
+                  id="Form-pass5"
+                  [(ngModel)]="this.parentOtp.mobile_number"
+                  required
+                >
+                </ion-input>
+                <!--
+                  <ion-icon name="eye" ios="ios-eye" md="md-eye"></ion-icon>
+                -->
+                <!--
+                  <button type="button" name="passwordIcon" ion-button clear item-end (click)="showPassword(input)" style="height:20px;" >
+                        <ion-icon name="eye" style="font-size:20px;"></ion-icon>
+                      </button>
+                -->
+              </ion-item>
+
+              <div *ngIf="error" class="alert alert-danger">
+                {{ LoginError }}
+              </div>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button
+              ion-button
+              class="btn btn-block btn-rounded "
+              type="submit"
+              [disabled]="!ParentloginForm.form.valid"
+            >
+              {{ this.buttonLabel }}
+            </button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+  <!-- End of Parent Form -->
+
+  <div>
+    <span (click)="back()" class="back">
+      <ion-icon name="ios-arrow-back-outline"></ion-icon
+    ></span>
+  </div>
+</ion-content>

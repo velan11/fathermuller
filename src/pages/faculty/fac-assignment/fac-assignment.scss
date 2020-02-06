@@ -1,0 +1,51 @@
+page-fac-assignment {
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  textarea.text-input.text-input-md {
+    height: 100px;
+  }
+
+  .bar-button-default-ios {
+    color: #fff;
+  }
+  ion-label#lbl-73 {
+    margin: 0;
+  }
+  .label-ios {
+    position: relative;
+    top: -9px;
+  }
+  .select-text {
+    font-size: 12px !important;
+  }
+  ion-item.item.item-block.item-ios.item-radio {
+    font-size: 12px !important;
+  }
+  .input-wrapper {
+    font-size: 12px !important;
+  }
+  ion-select.select.select-ios.ng-dirty.ng-valid.ng-touched {
+    padding-top: 10px;
+  }
+  span.button-inner {
+    margin-top: 0px;
+  }
+
+  .content-page {
+    background: url(../../assets/imgs/content-bg.jpg);
+    background-repeat: no-repeat;
+  }
+
+  .form-attendance {
+    background: white;
+    background-position: center;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 18px auto;
+  }
+}

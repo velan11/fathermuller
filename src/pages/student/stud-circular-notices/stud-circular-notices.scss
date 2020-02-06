@@ -1,0 +1,92 @@
+page-stud-circular-notices {
+  ion-card {
+    padding: 10px !important;
+    border-radius: 20px !important;
+  }
+  .da {
+    ion-card {
+      padding: 13px 14px !important;
+    }
+  }
+
+  button.btn-icon.disable-hover.button.button-md.button-default.button-default-md.button-full.button-full-md {
+    background: linear-gradient(to bottom, #f78470 0%, #a92c16 100%);
+    padding: 7px;
+    width: 150px;
+    padding-top: 10px;
+    height: 80px;
+  }
+  button.btn-icon-info {
+    padding: 5%;
+    margin-top: 15%;
+    background: none;
+    text-decoration: underline;
+    color: blue;
+    font-size: 16px;
+  }
+
+  .button-ios {
+    margin: 1.5rem 0.2rem;
+    padding: 20px 1em;
+    background-color: #dc6652;
+    height: 50px;
+  }
+
+  button.btn-icon {
+    color: #4e4e4e;
+    font-size: 16px;
+    text-align: left;
+    background: #f9f9f9 !important;
+    padding: 0px 0 15px 10px;
+    height: 60px;
+    box-shadow: 0px 2px 5px #ccc;
+    margin: 0px;
+    line-height: 22px;
+  }
+
+  button.btn-icon-info {
+    background: none;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+    line-height: 26px;
+    height: 60px;
+    margin: 0px;
+  }
+  .btn-icon-info h4 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1085ca;
+  }
+
+  .icon-info-col {
+    padding: 8px 10px 8px 0px !important;
+    display: inline-table;
+  }
+
+  .icon-col {
+    padding: 8px 10px 8px 20px !important;
+    display: inline-table;
+  }
+
+  .divider {
+    border-bottom: 1px solid #e4e2e2;
+    padding: 5px 0;
+  }
+
+  .content-page {
+    background: url(../../assets/imgs/content-bg.jpg);
+    // margin: 57px 14px 23px 0px;
+    background-repeat: no-repeat;
+  }
+
+  .form-attendance {
+    background: white;
+    background-position: center;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px auto;
+  }
+}

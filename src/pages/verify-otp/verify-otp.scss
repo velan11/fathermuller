@@ -1,0 +1,69 @@
+page-verify-otp {
+  .otp_back {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 25px 25px;
+    border: 1px solid #a80000;
+    border-radius: 30px;
+
+    margin: 30% 3% 0 03%;
+  }
+  .verify_text {
+    position: relative;
+    text-align: center;
+    // color: #fff;
+  }
+  .btm_txt {
+    font-size: 13px;
+    text-align: center;
+    color: #757575;
+    padding: 4%;
+  }
+  .form_center {
+    margin: 8px 0 0 40%;
+  }
+  .otp {
+    border-bottom: 1px solid #009191;
+  }
+  .footer-otp {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .lblOtp {
+    color: #000;
+  }
+  .login-row-otp {
+    background: none;
+  }
+  .otp_container {
+    background: url(../assets/imgs/otp_bg.jpg) no-repeat;
+    background-size: cover;
+    // filter: grayscale(50%);
+  }
+  .list-md
+    .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+  .list-md
+    .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom-color: #a80000;
+    -webkit-box-shadow: inset 0 -1px 0 0 #a80000;
+    box-shadow: inset 0 -1px 0 0 #a80000;
+  }
+  .list-ios[inset] {
+    margin: 0px;
+  }
+  .btm_txt {
+    font-size: 11px;
+    text-align: center;
+    color: #a92c16;
+    padding: 4%;
+  }
+  .grey-text {
+    color: #000000 !important;
+  }
+
+  .footer-otp {
+    margin-top: 100px;
+  }
+  .alert-danger {
+    width: 275px;
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-file-opener2": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "integrator-cordova-plugin-downloader": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    },
+    "cordova-plugin-firebasex": {
+      "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
+      "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
+      "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "biz.atconline.pacifyca.gonzaga"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+page-stud-contact-us {
+  .contact-us {
+    padding: 15px;
+  }
+  button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button {
+    color: #fff;
+  }
+  ion-card-header.card-header.card-header-ios {
+    background: #d8d8d8;
+  }
+  .card-title {
+    margin-bottom: 0px;
+  }
+  .card-title-ios {
+    display: block;
+    font-size: 15px;
+    line-height: 0;
+    color: #222;
+    margin: 0px 0;
+    padding: 8px 0;
+  }
+
+  .content-page {
+    background: url(../../assets/imgs/content-bg.jpg);
+    // margin: 57px 14px 23px 0px;
+    background-repeat: no-repeat;
+  }
+}

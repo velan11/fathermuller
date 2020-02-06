@@ -1,0 +1,41 @@
+<ion-content class="choose-bg">
+  <div class="text-center select-col">
+    <img
+      src="../../assets/imgs/question.png"
+      width="60px"
+      style="margin-bottom: 20px;"
+    />
+    <p class="text1">I am a</p>
+    <p class="text2">Select your Section you want to be Sign in</p>
+
+    <div class="d-flex justify-content-around mt-5">
+      <div class="ml-1">
+        <!-- Remember me -->
+        <button
+          type="button"
+          ion-button
+          (click)="facultyLogin()"
+          class="btn btn-block z-depth-1 choose-bt"
+        >
+          Faculty
+        </button>
+      </div>
+      <div class="mr-1">
+        <!-- Forgot password -->
+        <button
+          ion-button
+          (click)="parentLogin()"
+          type="button"
+          class="btn btn-block z-depth-1 choose-bt"
+        >
+          Students
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <p>
+    <img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE
+  </p></ion-footer
+>

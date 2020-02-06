@@ -1,0 +1,25 @@
+page-fac-events {
+  .content-page {
+    background: url(../../assets/imgs/content-bg.jpg);
+    // margin: 57px 14px 23px 0px;
+    background-repeat: no-repeat;
+  }
+
+  .form-attendance {
+    background: white;
+    background-position: center;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px auto;
+  }
+  ion-card {
+    padding: 10px !important;
+    border-radius: 20px !important;
+  }
+  .da {
+    ion-card {
+      padding: 13px 14px !important;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title class="tite">Calendar</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-page">
+  <!-- <div class="REM_ev"></div> -->
+  <!-- <div class="REM_hl"></div> -->
+  <!-- <div class="Hol_ev"></div> -->
+  <!-- <div class="Hol_rm"></div> -->
+  <!-- <div class="EVT_rm"></div> -->
+  <!-- <div class="EVT_Hol"></div> -->
+  <div class="form-attendance">
+    <ion-calendar
+      *ngIf="calc == 0"
+      [(ngModel)]="date"
+      class="ion-clder"
+      [type]="type"
+      [readonly]="false"
+      [options]="optionsRange"
+      (onSelect)="onSelect($event)"
+      (monthChange)="monthchnge($event)"
+      [format]="'YYYY-MM-DD'"
+    >
+    </ion-calendar>
+    <br />
+
+    <!-- (ionSlideDidChange)="slideChanged()" -->
+
+    <mat-card>
+      <!-- <img src="../../assets/imgs/red.jpg" width="15px;" height="15px;" class="imgHoldy"> -->
+      <!-- <img src="../../assets/imgs/y1.jpg" width="15px;" height="15px;" class="imgEvent"> -->
+      <!-- <img src="../../assets/imgs/blue.png" width="15px;" height="15px;" class="imgRemd"> -->
+      &nbsp;&nbsp;&nbsp; <span class="dot"></span>&nbsp;Holiday
+      &nbsp;&nbsp;&nbsp;<span class="dot_evt"></span> &nbsp;Event
+      &nbsp;&nbsp;&nbsp;<span class="dot_remd"></span> &nbsp;Reminder
+    </mat-card>
+    <mat-card *ngFor="let event of Show_Event">
+      <mat-card-title>
+        <ion-badge
+          *ngIf="event.type == 'HOLIDAY'"
+          class="show_holdy"
+          item-end
+          color="danger"
+          >{{ event.type }}</ion-badge
+        >
+        <ion-badge *ngIf="event.type == 'EVENT'" class="Show_evt" item-end
+          >{{ event.type }}</ion-badge
+        >
+        <ion-badge *ngIf="event.type == 'REMINDER'" class="show_rmider" item-end
+          >{{ event.type }}</ion-badge
+        >
+      </mat-card-title>
+      <!-- <ion-icon name="calendar"></ion-icon> &nbsp; -->
+      Event Date : {{ event.date }}/{{ event.month + 1 }}/{{ event.year }}
+      &nbsp;
+      <br />
+      Event Title : {{ event.title }} <br />
+      Event Description : {{ event.descri }}
+      <!-- <ion-icon name="calendar"></ion-icon> &nbsp;&nbsp;
+    
+         {{event.date}} / {{event.month}} /{{event.year}} : {{event.description}} -->
+    </mat-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

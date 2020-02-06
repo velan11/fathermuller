@@ -1,0 +1,79 @@
+<!--
+  Generated template for the FacViewAssignmentModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons right (click)="dismiss()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Assignment Description</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="content-page">
+  <div class="form-attendance">
+      <div class="desc-view">
+          <div class="list-desc">
+            <button ion-button class="toggle" (click)="toggleDescList()">
+              <ion-icon name="add" *ngIf="!showDescList"></ion-icon>
+              <ion-icon name="remove" *ngIf="showDescList"></ion-icon>
+            </button>
+            <h3 class="desc-title">
+              Description:
+            </h3>
+            <p
+              *ngIf="showDescList"
+              class="desc"
+              [innerHTML]="assDesc.description"
+            ></p>
+          </div>
+          <div class="list-desc">
+            <button ion-button class="toggle" (click)="toggleReadList()">
+              <ion-icon name="add" *ngIf="!showReadList"></ion-icon>
+              <ion-icon name="remove" *ngIf="showReadList"></ion-icon>
+            </button>
+            <h3 class="desc-title">
+              Read Students List:
+            </h3>
+            <p class="desc" *ngIf="showReadList">{{ assDesc.read_student_list }}</p>
+          </div>
+          <div class="list-desc">
+            <button ion-button class="toggle" (click)="toggleSentList()">
+              <ion-icon name="add" *ngIf="!showSentList"></ion-icon>
+              <ion-icon name="remove" *ngIf="showSentList"></ion-icon>
+            </button>
+            <h3 class="desc-title">
+              Sent Students:
+            </h3>
+      
+            <p class="desc" *ngIf="showSentList">{{ assDesc.sent_to }}</p>
+          </div>
+          <div class="list-desc">
+            <h3 class="desc-title">
+              Expiry Date:
+            </h3>
+            <p class="desc">{{ assDesc.expiry_date }}</p>
+          </div>
+      
+          <div class="list-desc">
+            <h3 class="desc-title">
+              Sent From:
+            </h3>
+            <p class="desc">{{ assDesc.sent_from }}</p>
+          </div>
+        </div>
+  </div>
+ 
+</ion-content>
+<ion-footer>
+    <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

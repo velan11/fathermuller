@@ -1,0 +1,84 @@
+page-menu {
+  .menuBar {
+    background: #1d2b70;
+    color: #fff;
+  }
+  .item-md [item-left],
+  .item-md [item-right],
+  .item-md [item-start],
+  .item-md [item-end] {
+    margin: 0px !important;
+    color: #2d4c65;
+  }
+  .item > ion-icon,
+  .item-inner > ion-icon {
+    font-size: 2.2rem !important;
+    position: relative;
+    top: 2px;
+  }
+  .item-md ion-icon[item-left] + .item-inner,
+  .item-md ion-icon[item-left] + .item-input,
+  .item-md ion-icon[item-start] + .item-inner,
+  .item-md ion-icon[item-start] + .item-input {
+    margin-left: 8px !important;
+  }
+  .label-md span {
+    color: #565656;
+  }
+  button:focus {
+    outline: 0px !important;
+  }
+
+  //menu Accordian style
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active,
+  .accordion:hover {
+    background-color: #ccc;
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  //menu
+  .menu-profile {
+    border-bottom: 1px solid #ddd;
+    padding: 32px;
+    background: #1d2b70;
+    color: #fff;
+  }
+  .toolbar-background-ios {
+    background: #a92c16 !important;
+  }
+  .toolbar-title-ios {
+    color: #fff;
+  }
+
+  .item-ios ion-icon[item-left] {
+    color: #a92c16;
+  }
+  .label-ios {
+    font-size: 11px;
+  }
+  button.disable-hover.bar-buttons.bar-buttons-ios.bar-button.bar-button-ios.bar-button-default.bar-button-default-ios.bar-button-menutoggle.bar-button-menutoggle-ios {
+    background: none;
+    color: #fff;
+  }
+}

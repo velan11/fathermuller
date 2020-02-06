@@ -1,0 +1,74 @@
+<ion-menu [content]="content" side="left" type="overlay">
+  <ion-header>
+    <ion-toolbar menuClose class="menuBar">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="card-background-page">
+    <ion-list *ngIf="studentMenuShow">
+      <button
+        menuClose
+        class="left-menu"
+        ion-item
+        *ngFor="let p of studentPages"
+        (click)="openPage(p)"
+      >
+        <ion-icon
+          class="menu-icon-style"
+          name="{{ p.icon }}"
+          item-left
+        ></ion-icon>
+        <span *ngIf="p.title == 'Home'"> Home</span>
+        <span *ngIf="p.title == 'About Student'">About Student</span>
+        <span *ngIf="p.title == 'About Institute'">About Institute</span>
+        <span *ngIf="p.title == 'News and Events'">News and Events</span>
+        <span *ngIf="p.title == 'Circular and Notices'"
+          >Circular and Notices</span
+        >
+        <span *ngIf="p.title == 'Exam Schedule'">Exam Schedule</span>
+        <span *ngIf="p.title == 'Assignments'">Assignments</span>
+        <span *ngIf="p.title == 'SMS'">SMS</span>
+        <!-- <span *ngIf="p.title == 'School Calendar'">School Calendar</span> -->
+
+        <!-- <span *ngIf="p.title == 'Attendance'">Attendance</span> -->
+        <span *ngIf="p.title == 'TimeTable'">Class Schedule</span>
+        <span *ngIf="p.title == 'Progress Report'">Progress Report</span>
+        <span *ngIf="p.title == 'Videos'">Videos</span>
+        <span *ngIf="p.title == 'Contact Us'">Contact Us</span>
+        <span *ngIf="p.title == 'Logout'">Logout</span>
+      </button>
+    </ion-list>
+
+    <ion-list *ngIf="facultyMenuShow">
+      <button
+        menuClose
+        class="left-menu"
+        ion-item
+        *ngFor="let p of facultyPages"
+        (click)="openPage(p)"
+      >
+        <ion-icon
+          class="menu-icon-style"
+          name="{{ p.icon }}"
+          item-left
+        ></ion-icon>
+
+        <span *ngIf="p.title == 'Home'">Home</span>
+        <span *ngIf="p.title == 'Profile'">Profile</span>
+        <span *ngIf="p.title == 'About Institute'">About Institute</span>
+        <span *ngIf="p.title == 'Assignments'"> Assignments</span>
+        <span *ngIf="p.title == 'View Assignments'"> View Assignments</span>
+
+        <span *ngIf="p.title == 'Change Password'">
+          Change Password
+        </span>
+        <span *ngIf="p.title == 'News / Events'">News and Events</span>
+        <span *ngIf="p.title == 'Notice'">Notice</span>
+        <span *ngIf="p.title == 'Logout'">Logout</span>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="homePage"></ion-nav>

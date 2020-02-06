@@ -1,0 +1,81 @@
+page-landing {
+  .choose-bg {
+    background: url(../assets/imgs/choose-option-bg.jpg) no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+  .mt-15 {
+    margin-top: 180px;
+  }
+  p.text1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  p.text2 {
+    font-size: 15px;
+  }
+
+  p,
+  h1,
+  h2,
+  ion-label,
+  h3 {
+    color: #fff !important;
+  }
+  // .footer-bg {
+  //   background: url(../assets/imgs/choose_footer_img.png) no-repeat;
+  // }
+  .p-15 {
+    padding: 150px;
+  }
+  .scroll-content {
+    padding: 0px !important;
+  }
+  .pt-15 {
+    padding-top: 150px;
+  }
+  .choose-bg {
+    padding: 0 15px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .button-inner {
+    font-size: 13px;
+  }
+  .text-center.select-col {
+    padding: 30px;
+  }
+
+  .choose-bt {
+    background-image: -webkit-linear-gradient(-8deg, #f4f4f4 0%, #f4f4f4 100%);
+    color: #212529;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  .choose-bt:hover {
+    border: 1px solid #ccc;
+    color: #8b8b8b;
+    background: none;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .select-col {
+      top: 60%;
+    }
+    .select-col .btn {
+      margin-top: 10px;
+      padding: 15px 25px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .select-col .btn {
+      margin-top: 20px;
+      padding: 15px 25px;
+    }
+  }
+}

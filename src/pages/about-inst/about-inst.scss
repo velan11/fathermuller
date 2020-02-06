@@ -1,0 +1,48 @@
+page-about-inst {
+    
+    .content {
+        margin: 0px;
+        padding: 14px;
+        text-align: justify;
+    }
+
+    .heading {
+        font-weight: bold;
+        margin: 15px auto;
+        padding-top: 15px;
+    }
+
+    .content-page {
+        background: url(../../assets/imgs/content-bg.jpg);
+        background-repeat: no-repeat;
+    }
+    
+    .form-attendance {
+        background: white;
+        background-position: center;
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px auto;
+        top: 5px;
+    }
+
+    img.slider-img {
+        height: 150px;
+        width: 100%;
+        padding: 15px;
+        border-radius: 25px 25px 0 25px;
+    }
+
+    // @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    //     img.slider-img {
+    //         height: 295px !important;
+    //     }
+    // }
+
+    // @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    //     img.slider-img {
+    //         height: 375px !important;
+    //     }
+    // }
+}

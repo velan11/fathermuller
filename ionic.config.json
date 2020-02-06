@@ -1,0 +1,7 @@
+{
+  "name": "pacifyca_gonzaga",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,243 @@
+<!--
+  Generated template for the FacAssignmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Manage Assignments</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content-page">
+  <div>
+    <div class="inner-text text-center">
+      <div class="student-head"><h4>Add Assignments</h4></div>
+    </div>
+  </div>
+
+  <div class="form-attendance">
+    <form
+      #createAssignmentForm="ngForm"
+      (ngSubmit)="createAssignments()"
+      autocomplete="on"
+    >
+      <!--
+          <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+              <div [hidden]="!date.hasError('required')">Date is required</div>
+          </div>
+        -->
+
+      <ion-item>
+        <ion-label floating
+          >Course<span class="mandatory-asterick">*</span></ion-label
+        >
+        <ion-select
+          interface="popover"
+          required
+          name="course"
+          [(ngModel)]="createAssignment.course"
+          (ionChange)="getCoursePeriod()"
+        >
+          <!-- <ion-option aria-checked="true"> Select Course </ion-option> -->
+          <ion-option *ngFor="let item of course_list" [value]="item.key">
+            MBBS
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <!--
+          <div [hidden]="course.valid || course.pristine" class="alert alert-danger">
+              <div [hidden]="!course.hasError('required')">Course is required</div>
+          </div>
+        -->
+
+      <ion-item>
+        <ion-label floating>
+          Course Period <span class="mandatory-asterick">*</span>
+        </ion-label>
+        <ion-select
+          interface="popover"
+          required
+          name="period"
+          [(ngModel)]="createAssignment.period"
+          (ionChange)="getSubject()"
+        >
+          <ion-option *ngFor="let item of coursePeriod" [value]="item.key">
+            {{ item.value }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          Subject <span class="mandatory-asterick">*</span>
+        </ion-label>
+        <ion-select
+          interface="popover"
+          required
+          name="subject"
+          [(ngModel)]="createAssignment.subject"
+          (ionChange)="getBatch()"
+        >
+          <ion-option *ngFor="let item of subject_details" [value]="item.key">
+            Medicine
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="hideMe">
+        <ion-label floating>
+          Section/ Batch <span class="mandatory-asterick">*</span>
+        </ion-label>
+        <ion-select
+          interface="popover"
+          required
+          name="batch"
+          [(ngModel)]="createAssignment.section"
+        >
+          <ion-option *ngFor="let item of section_details" [value]="item.key">
+            {{ item.value }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="hideMe">
+        <ion-label floating
+          >Assignment Title <span class="mandatory-asterick">*</span></ion-label
+        >
+        <ion-input
+          required
+          name="assignmentTitle"
+          [(ngModel)]="createAssignment.assignmentTitle"
+        ></ion-input>
+      </ion-item>
+      <ion-item *ngIf="hideMe">
+        <ion-label floating
+          >Add Assignment Description <span class="mandatory-asterick">*</span>
+        </ion-label></ion-item
+      >
+      <!-- <quill-editor
+        [style]="{ height: '200px' }"
+        *ngIf="hideMe"
+        name="description"
+        required
+        [(ngModel)]="createAssignment.description"
+      ></quill-editor> -->
+      <quill-editor
+        *ngIf="hideMe"
+        placeholder="Enter Description text...."
+        required
+        [modules]="modules"
+        link-tooltip="true"
+        image-tooltip="true"
+        name="description"
+        id="field_description"
+        [(ngModel)]="createAssignment.description"
+        (onContentChanged)="onEditorContentChange($event)"
+      >
+      </quill-editor>
+
+      <!-- <editor
+        *ngIf="hideMe"
+        name="description"
+        [init]="tinyMceSettings"
+        required
+        [(ngModel)]="createAssignment.description"
+      ></editor> -->
+      <!-- <ion-textarea
+          required
+          name="description"
+          [(ngModel)]="createAssignment.description"
+        ></ion-textarea> -->
+
+      <ion-item *ngIf="hideMe">
+        <ion-label
+          >Start Date <span class="mandatory-asterick">*</span></ion-label
+        >
+        <ion-datetime
+          name="startdate"
+          displayFormat="DD/MM/YYYY"
+          pickerFormat="DD/MM/YYYY"
+          min="{{ tday }}"
+          [(ngModel)]="createAssignment.startDate"
+          (ngModelChange)="getStartDate()"
+          placeholder="{{ this.createAssignment.startDate }}"
+        ></ion-datetime>
+      </ion-item>
+
+      <ion-item *ngIf="hideMe">
+        <ion-label
+          >Completion Date<span class="mandatory-asterick">*</span></ion-label
+        >
+        <ion-datetime
+          name="expirydate"
+          required
+          displayFormat="DD/MM/YYYY"
+          pickerFormat="DD/MM/YYYY"
+          min="{{ tday }}"
+          [(ngModel)]="createAssignment.expiryDate"
+          (ngModelChange)="getExpirydate()"
+          placeholder=""
+        ></ion-datetime>
+      </ion-item>
+      <br />
+      <ion-row>
+        <ion-col col-6>
+          <!-- <div *ngIf="error" class="alert alert-danger">{{error}}</div> -->
+          <button
+            ion-button
+            class="btn btn-block login-btn btn-rounded z-depth-1"
+            [disabled]="disabled"
+            full
+            type="submit"
+            [disabled]="!createAssignmentForm.form.valid"
+          >
+            <ion-icon ios="ios-search" md="md-search"></ion-icon>
+            Students
+          </button>
+        </ion-col>
+        <!--
+            <ion-col>
+                <button ion-button color="light" (click)="reset()" full>Reset
+                </button>  (click)="cancel()"
+            </ion-col>
+          -->
+        <!-- </ion-row>
+   
+    <ion-row> -->
+        <ion-col col-6>
+          <button
+            class="btn btn-block login-btn btn-rounded z-depth-1"
+            ion-button
+            color="danger"
+            style="background: #f53d3d;"
+            (click)="reset()"
+            full
+          >
+            Reset
+          </button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

@@ -1,0 +1,341 @@
+<!--
+  Generated template for the StudTimetablePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" style="color:white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Class schedule</ion-title>
+    <ion-buttons right (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon
+          ios="ios-arrow-back"
+          md="md-arrow-back"
+          style="color:white"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2 text-center style="margin-top: 25px;">Class schedule</h2>
+  <img
+    style="margin-top: 25px;"
+    src="../../../assets/images/TimeSchedule .jpg"
+    (click)="viewPhoto()"
+  />
+  <p
+    style="color: #5282af;font-size: 11px;text-align: right;
+        margin-right: 15px;"
+  >
+    *Click to View notice and SHARE
+  </p>
+</ion-content>
+<!-- <ion-content *ngIf="responseData" class="content-page">
+  <img *ngIf="responseData.data.length <=0" class="img1" src="../../assets/imgs/speaking.jpg" width="100%" height="20%">
+  <img src="../../../assets/images/TimeSchedule .jpg" (click)="viewPhoto()" />
+  <div style="display: none;">
+    <div *ngIf="responseData.data.length <= 0" class="No_data">
+      <ion-icon name="alert"></ion-icon> &nbsp;No Data to Display..!
+    </div>
+    <ion-slides
+      initialSlide="{{ indexSlideno }}"
+      class="slides2"
+      *ngIf="responseData.data.length >= 0"
+    >
+      <ion-slide>
+        <div class="dayName">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button class="left_arrow" (click)="prevSlide()">
+                  <ion-icon name="arrow-dropleft"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                Monday
+              </ion-col>
+              <ion-col>
+                <button ion-button class="arrow" (click)="nextSlide()">
+                  <ion-icon name="arrow-dropright"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <mat-grid-list cols="3" rowHeight="5:2" class="gridlist" padding>
+          <mat-grid-tile class="peroid" color="teal">Peroid</mat-grid-tile>
+          <mat-grid-tile class="time" color="teal">Time</mat-grid-tile>
+          <mat-grid-tile class="subject" color="teal">Subject</mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list
+          cols="3"
+          rowHeight="5:2"
+          *ngFor="let d of Monday_Data; let i = index"
+        >
+          <mat-grid-tile class="d_id">{{ i + 1 }}</mat-grid-tile>
+          <mat-grid-tile class="d_time"
+            >{{ d.from_time }}-{{ d.end_time }}</mat-grid-tile
+          >
+          <mat-grid-tile class="d_sub">{{ d.subName }}</mat-grid-tile>
+        </mat-grid-list>
+        <div class="footer">
+          <p></p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="dayName">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button class="left_arrow" (click)="prevSlide()">
+                  <ion-icon name="arrow-dropleft"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                Tuesday
+              </ion-col>
+              <ion-col>
+                <button ion-button class="arrow" (click)="nextSlide()">
+                  <ion-icon name="arrow-dropright"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <mat-grid-list cols="3" rowHeight="5:2" class="gridlist" padding>
+          <mat-grid-tile class="peroid" color="teal">Peroid</mat-grid-tile>
+          <mat-grid-tile class="time" color="teal">Time</mat-grid-tile>
+          <mat-grid-tile class="subject" color="teal">Subject</mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list
+          cols="3"
+          rowHeight="5:2"
+          *ngFor="let d of Tuesdy_data; let i = index"
+        >
+          <mat-grid-tile class="d_id">{{ i + 1 }}</mat-grid-tile>
+          <mat-grid-tile class="d_time"
+            >{{ d.from_time }}-{{ d.end_time }}</mat-grid-tile
+          >
+          <mat-grid-tile class="d_sub">{{ d.subName }}</mat-grid-tile>
+        </mat-grid-list>
+        <div class="footer">
+          <p></p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="dayName">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button class="left_arrow" (click)="prevSlide()">
+                  <ion-icon name="arrow-dropleft"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                Wednesday
+              </ion-col>
+              <ion-col>
+                <button ion-button class="arrow" (click)="nextSlide()">
+                  <ion-icon name="arrow-dropright"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <mat-grid-list cols="3" rowHeight="5:2" class="gridlist" padding>
+          <mat-grid-tile class="peroid" color="teal">Peroid</mat-grid-tile>
+          <mat-grid-tile class="time" color="teal">Time</mat-grid-tile>
+          <mat-grid-tile class="subject" color="teal">Subject</mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list
+          cols="3"
+          rowHeight="5:2"
+          *ngFor="let d of Wensdy_data; let i = index"
+        >
+          <mat-grid-tile class="d_id">{{ i + 1 }}</mat-grid-tile>
+          <mat-grid-tile class="d_time"
+            >{{ d.from_time }}-{{ d.end_time }}</mat-grid-tile
+          >
+          <mat-grid-tile class="d_sub">{{ d.subName }}</mat-grid-tile>
+        </mat-grid-list>
+        <div class="footer">
+          <p></p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="dayName">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button class="left_arrow" (click)="prevSlide()">
+                  <ion-icon name="arrow-dropleft"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                Thursday
+              </ion-col>
+              <ion-col>
+                <button ion-button class="arrow" (click)="nextSlide()">
+                  <ion-icon name="arrow-dropright"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <mat-grid-list cols="3" rowHeight="5:2" class="gridlist" padding>
+          <mat-grid-tile class="peroid" color="teal">Peroid</mat-grid-tile>
+          <mat-grid-tile class="time" color="teal">Time</mat-grid-tile>
+          <mat-grid-tile class="subject" color="teal">Subject</mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list
+          cols="3"
+          rowHeight="5:2"
+          *ngFor="let d of Thrsdy_data; let i = index"
+        >
+          <mat-grid-tile class="d_id">{{ i + 1 }}</mat-grid-tile>
+          <mat-grid-tile class="d_time"
+            >{{ d.from_time }}-{{ d.end_time }}</mat-grid-tile
+          >
+          <mat-grid-tile class="d_sub">{{ d.subName }}</mat-grid-tile>
+        </mat-grid-list>
+        <div class="footer">
+          <p></p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="dayName">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button class="left_arrow" (click)="prevSlide()">
+                  <ion-icon name="arrow-dropleft"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                Friday
+              </ion-col>
+              <ion-col>
+                <button ion-button class="arrow" (click)="nextSlide()">
+                  <ion-icon name="arrow-dropright"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <mat-grid-list cols="3" rowHeight="5:2" class="gridlist" padding>
+          <mat-grid-tile class="peroid" color="teal">Peroid</mat-grid-tile>
+          <mat-grid-tile class="time" color="teal">Time</mat-grid-tile>
+          <mat-grid-tile class="subject" color="teal">Subject</mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list
+          cols="3"
+          rowHeight="5:2"
+          *ngFor="let d of Frisdy_data; let i = index"
+        >
+          <mat-grid-tile class="d_id">{{ i + 1 }}</mat-grid-tile>
+          <mat-grid-tile class="d_time"
+            >{{ d.from_time }}-{{ d.end_time }}</mat-grid-tile
+          >
+          <mat-grid-tile class="d_sub">{{ d.subName }}</mat-grid-tile>
+        </mat-grid-list>
+        <div class="footer">
+          <p></p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="dayName">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button class="left_arrow" (click)="prevSlide()">
+                  <ion-icon name="arrow-dropleft"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                Saturday
+              </ion-col>
+              <ion-col>
+                <button ion-button class="arrow" (click)="nextSlide()">
+                  <ion-icon name="arrow-dropright"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <mat-grid-list cols="3" rowHeight="5:2" class="gridlist" padding>
+          <mat-grid-tile class="peroid" color="teal">Peroid</mat-grid-tile>
+          <mat-grid-tile class="time" color="teal">Time</mat-grid-tile>
+          <mat-grid-tile class="subject" color="teal">Subject</mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list
+          cols="3"
+          rowHeight="5:2"
+          *ngFor="let d of Satsdy_data; let i = index"
+        >
+          <mat-grid-tile class="d_id">{{ i + 1 }}</mat-grid-tile>
+          <mat-grid-tile class="d_time"
+            >{{ d.from_time }}-{{ d.end_time }}</mat-grid-tile
+          >
+          <mat-grid-tile class="d_sub">{{ d.subName }}</mat-grid-tile>
+        </mat-grid-list>
+        <div class="footer">
+          <p></p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="dayName">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button class="left_arrow" (click)="prevSlide()">
+                  <ion-icon name="arrow-dropleft"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                Sunday
+              </ion-col>
+              <ion-col> </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <mat-grid-list cols="3" rowHeight="5:2" class="gridlist" padding>
+          <mat-grid-tile class="peroid" color="teal">Peroid</mat-grid-tile>
+          <mat-grid-tile class="time" color="teal">Time</mat-grid-tile>
+          <mat-grid-tile class="subject" color="teal">Subject</mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list
+          cols="3"
+          rowHeight="5:2"
+          *ngFor="let d of Sundy_data; let i = index"
+        >
+          <mat-grid-tile class="d_id">{{ i + 1 }}</mat-grid-tile>
+          <mat-grid-tile class="d_time"
+            >{{ d.from_time }}-{{ d.end_time }}</mat-grid-tile
+          >
+          <mat-grid-tile class="d_sub">{{ d.subName }}</mat-grid-tile>
+        </mat-grid-list>
+        <div class="footer">
+          <p></p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content> -->
+<ion-footer>
+  <p><img src="../../assets/imgs/atc.jpg" /> Powered By ATC ONLINE</p>
+</ion-footer>

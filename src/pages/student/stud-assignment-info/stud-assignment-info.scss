@@ -1,0 +1,38 @@
+page-stud-assignment-info {
+  .assignment-details-header {
+    background: #4960b0;
+    padding: 3px;
+    color: #fff;
+  }
+  .title {
+    margin: 0 0 0 8px;
+  }
+  .assignment-details-content {
+    padding: 20px;
+  }
+  h4.assign-info-heading {
+    color: #4960b0;
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  .list-md .item-block .item-inner {
+    border-bottom: 1px solid #dedede;
+    width: 285px;
+  }
+  .due-date {
+    color: red;
+  }
+  .assignment-details-header {
+    background: #568aff;
+    padding: 3px;
+    color: #fff;
+  }
+  ion-col.title.col {
+    padding: 3px 30px;
+  }
+  .assign-desc {
+    overflow-y: scroll;
+    height: 400px;
+    padding: 10px;
+  }
+}
